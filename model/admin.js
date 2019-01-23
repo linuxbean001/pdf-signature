@@ -31,25 +31,10 @@ var AddUserSchema=mongoose.Schema({
         required:true
     },
 
-    Address:{
-        'street':{
-           'type': {type:String},
-           'value':[String]
-
-        },
-        'city':{
-            'type':{type:String},
-            'value':[String]
-        },
-        'state':{
-            ' type':{type:String},
-            'value':[String]
-        },
-        'zip':{
-            'type':{type:Number},
-            'value':[Number]
-        }
-    }
+    Address: mongoose.Schema({street:String,
+        city:String,
+        state:String
+        ,zip:Number})
 
 });
 module.exports=mongoose.model('AddUser',AddUserSchema);

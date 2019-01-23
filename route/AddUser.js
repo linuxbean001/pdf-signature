@@ -30,12 +30,13 @@ router.post('/addUser', (req, res, next) => {
                     phone: req.body.phone,
                     alternativePhone: req.body.alternativePhone,
                     company: req.body.company,
-                    Address: [{
-                        'street': req.body.street,
-                        'city': req.body.city,
-                        'state': req.body.state,
-                        'zip': req.body.zip
-                    }]
+                    Address:{
+                    
+                        street: req.body.Address.street,
+                           city: req.body.Address.city,
+                           state: req.body.Address.state,
+                           zip: req.body.Address.zip
+                      }
                 });
                 console.log('Registerd user : ', newAddUser, " Address", newAddUser.Address, "email  ", newAddUser.email);
 
